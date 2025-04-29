@@ -16,7 +16,8 @@ services:
             - postgres
         networks:
             - app-network
-        command: php artisan serve --host=0.0.0.0 --port=8000
+        # command: php artisan serve --host=0.0.0.0 --port=8000
+        command: sh -c "php artisan migrate:fresh --force && php artisan serve --host=0.0.0.0 --port=8000"
 
     postgres:
         image: postgres:15
