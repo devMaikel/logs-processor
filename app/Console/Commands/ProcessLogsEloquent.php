@@ -22,6 +22,6 @@ class ProcessLogsEloquent extends Command
         $duration = $end - $start;
         
         $this->info(PHP_EOL . 'Logs processados com sucesso!');
-        $this->info('Tempo total: ' . number_format($duration, 2) . ' segundos');
+        $this->info('Tempo total da operação: ' . number_format($duration, 2) . ' segundos');
     }
 }

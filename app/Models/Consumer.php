@@ -9,4 +9,9 @@ class Consumer extends Model
     protected $fillable = [
         'id'
     ];
+
+    public function logs()
+    {
+        return $this->hasMany(Log::class);
+    }
 }

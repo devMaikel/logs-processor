@@ -41,4 +41,19 @@ class Log extends Model
             $model->id = (string) Str::uuid();
         });
     }
+
+    public function consumer()
+    {
+        return $this->belongsTo(Consumer::class);
+    }
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
+
+    public function route()
+    {
+        return $this->belongsTo(Route::class);
+    }
 }
