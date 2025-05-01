@@ -24,7 +24,13 @@ Este projeto Laravel processa arquivos de log (`logs.txt`) contendo registros de
 3. Suba os containers:
 
     ```bash
-    docker-compose up --build
+    docker-compose up -d --build
+    ```
+
+4. Acesse o terminal do container do app:
+
+    ```bash
+    docker exec -it app bash
     ```
 
 ---
