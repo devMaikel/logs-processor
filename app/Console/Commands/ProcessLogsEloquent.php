@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class ProcessLogsEloquent extends Command
 {
-    protected $signature = 'process:LogsEloquent';
+    protected $signature = 'process:logsEloquent';
     protected $description = 'Processes the logs.txt file and saves information from it to the database';
 
     public function handle()
@@ -16,7 +16,7 @@ class ProcessLogsEloquent extends Command
         
         $this->info('Processando dados...');
         $processor = new ProcessLogsEloquentService();
-        $processor->processLogFile('logs100.txt', $this->output);
+        $processor->processLogFile('logs.txt', $this->output);
         
         $end = microtime(true);
         $duration = $end - $start;

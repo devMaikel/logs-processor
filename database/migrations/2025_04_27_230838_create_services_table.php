@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('service_id');
             $table->string('name');
             $table->string('host');
             $table->string('path')->nullable();

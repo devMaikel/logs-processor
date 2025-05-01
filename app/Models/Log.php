@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Str;
 
 class Log extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'consumer_id',
         'service_id',

@@ -75,7 +75,6 @@ class ProcessLogsEloquentService
       Service::firstOrCreate([
         'id' => $data['service']['id']
       ], [
-          'service_id' => $data['service']['id'],
           'name' => $data['service']['name'],
           'host' => $data['service']['host'],
           'path' => $data['service']['path'],
@@ -95,7 +94,6 @@ class ProcessLogsEloquentService
         Route::firstOrCreate([
             'id' => $data['route']['id']
         ], [
-            'route_id' => $data['route']['id'],
             'hosts' => $data['route']['hosts'],
             'methods' => $data['route']['methods'],
             'paths' => $data['route']['paths'],

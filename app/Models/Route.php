@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Route extends Model
 {
+    use HasFactory;
     protected $casts = [
         'hosts' => 'array',
         'methods' => 'array',
@@ -15,7 +17,6 @@ class Route extends Model
 
     protected $fillable = [
         'id',
-        'route_id',
         'hosts',
         'methods',
         'paths',

@@ -87,7 +87,6 @@ class ProcessLogsService
         if (!isset($this->existing_services[$service_id])) {
             DB::table('services')->insert([
                 'id' => $service_id,
-                'service_id' => $service_id,
                 'name' => $data['service']['name'],
                 'host' => $data['service']['host'],
                 'path' => $data['service']['path'],
@@ -111,7 +110,6 @@ class ProcessLogsService
         if (!isset($this->existing_routes[$route_id])) {
             DB::table('routes')->insert([
                 'id' => $route_id,
-                'route_id' => $route_id,
                 'hosts' => json_encode($data['route']['hosts']),
                 'methods' => json_encode($data['route']['methods']),
                 'paths' => json_encode($data['route']['paths']),
