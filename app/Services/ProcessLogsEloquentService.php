@@ -16,6 +16,12 @@ class ProcessLogsEloquentService
     public function processLogFile(string $filePath, $output)
     {
         $this->prepareDatabase();
+
+        $fullPath = base_path($filePath);
+
+        if (!file_exists($fullPath)) {
+            throw new \Exception("O arquivo '{$filePath}' não foi encontrado na raiz do projeto.");
+        }
         
         $file = fopen($filePath, 'r');
         $totalLines = $this->countFileLines($file);
