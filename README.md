@@ -22,10 +22,23 @@ Este projeto Laravel processa arquivos de log (`logs.txt`) contendo registros de
 2. Suba os containers:
 
     ```bash
-    docker-compose up -d --build
+    docker-compose up --build
     ```
 
 3. Adicione o arquivo `logs.txt` na **raiz do projeto** (mesmo nível do `artisan`).
+
+4. Altere esses campos no arquivo .env na raiz do projeto:
+
+    ```bash
+    DB_CONNECTION=pgsql
+    DB_HOST=postgres
+    DB_PORT=5432
+    DB_DATABASE=logs
+    DB_USERNAME=laravel
+    DB_PASSWORD=secret
+
+    SESSION_DRIVER=file
+    ```
 
 ---
 
