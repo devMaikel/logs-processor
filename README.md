@@ -21,7 +21,7 @@ Este projeto Laravel processa arquivos de log (`logs.txt`) contendo registros de
 
 2. Adicione o arquivo `logs.txt` na **raiz do projeto** (mesmo nível do `artisan`).
 
-3. Suba os containers:
+3. Suba os containers e aguarde a instalação de todos os pacotes:
 
     ```bash
     docker-compose up -d --build
