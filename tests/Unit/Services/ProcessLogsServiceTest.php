@@ -20,7 +20,7 @@ class ProcessLogsServiceTest extends TestCase
 
     public function test_process_log_file_inserts_data_correctly()
     {
-        $logFile = storage_path('app/test_logs.txt');
+        $logFile = 'storage/app/test_logs.txt';
         file_put_contents($logFile, $this->getSampleLogLines());
 
         $this->service->processLogFile($logFile, $this->getMockOutput());
